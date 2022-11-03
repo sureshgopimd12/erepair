@@ -1,0 +1,443 @@
+body {
+  font-size: 16px;
+  height: 150vh;
+  counter-reset: section;
+  color: var(--tcolor);
+}
+
+.mainBtn {
+  padding: 20px 35px;
+  border-radius: 20px;
+  border: none;
+  color: #fff;
+  background-color: var(--acnt);
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s all ease;
+  font-weight: 800;
+}
+.mainBtn:hover {
+  background-color: var(--dblue);
+  color: #fff;
+  text-decoration: none;
+}
+.mainBtn.icon {
+  padding: 20px 35px 20px 20px;
+  display: inline-flex;
+  align-items: center;
+}
+.mainBtn.icon i {
+  margin-right: 10px;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+.mainBtn.light {
+  background-color: #fff;
+  color: var(--dblue);
+}
+.mainBtn.light.icon i {
+  -webkit-text-stroke-color: var(--dblue);
+}
+.mainBtn.normal {
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+header .navbar-expand-lg::before {
+  content: "";
+  background-color: #fff;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transform: translateY(-150%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  transition: 0.5s all ease;
+  z-index: -1;
+}
+header .navbar-expand-lg .navbar-nav .nav-item {
+  margin-left: 34px;
+}
+header .navbar-expand-lg .navbar-nav .nav-link {
+  color: var(--tcolor);
+}
+header .navbar-expand-lg .navbar-nav .nav-link.active,
+header .navbar-expand-lg .navbar-nav .show > .nav-link {
+  color: var(--acnt);
+  font-weight: 700;
+}
+header .navbar-expand-lg.scrolled::before {
+  transform: translateY(0);
+  transition: 0.5s all cubic-bezier(0.94, 1.69, 0.56, 0.56);
+}
+
+.para {
+  line-height: 2;
+}
+
+main .sectionPad {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+main .mainTitle {
+  font-weight: 900;
+  color: var(--dblue);
+  position: relative;
+  z-index: 1;
+  font-size: 42px;
+  margin-bottom: 35px;
+}
+main .mainTitle::before {
+  counter-increment: section;
+  content: "0" counter(section);
+  font-size: 10px;
+  font-weight: 900;
+  color: var(--acnt);
+  position: absolute;
+  left: 0;
+  top: 0;
+  transform: translateY(-50%);
+}
+main .mainTitle::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background-color: #DDE7F1;
+  border-radius: 5px;
+  left: -10px;
+  bottom: 0;
+  z-index: -1;
+}
+main .mainTitle.light::after {
+  background-color: #fff;
+}
+main .mainTitle.dark {
+  color: #fff;
+}
+main .mainTitle.dark::before {
+  color: #fff;
+}
+main .mainTitle.dark::after {
+  background-color: var(--dblue);
+}
+main .mainTitle.center {
+  text-align: center;
+}
+main .mainTitle.center::before {
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+main .mainTitle.center::after {
+  left: calc(50% - 25px);
+}
+main .smallHead {
+  font-weight: 600;
+  color: var(--dblue);
+}
+main .heroSection {
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+}
+main .heroSection .heroText h1 {
+  font-size: 60px;
+  font-weight: 900;
+  color: var(--dblue);
+}
+main .heroSection .heroText h1 span {
+  color: var(--acnt);
+}
+main #how {
+  background-color: #F8FBFE;
+}
+main #how .howCard {
+  padding-top: 55px;
+}
+main #how .howCard .num {
+  color: #EECFD0;
+  font-weight: 900;
+  font-size: 100px;
+  position: relative;
+}
+main #how .howCard .num span {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+main #how .howCard img {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+main #how .howCard h6 {
+  font-weight: 700;
+  color: var(--dblue);
+  position: relative;
+  z-index: 1;
+  margin-bottom: 15px;
+}
+main #how .howCard p {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+main #why .col-lg-3 {
+  padding-bottom: 40px;
+}
+main #why .whyImg {
+  position: absolute;
+  width: calc(100% - 24px);
+  height: 100%;
+  top: 0;
+  left: 12px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 400px 400px 0 0;
+}
+main .whyCard {
+  margin-bottom: 60px;
+}
+main .whyCard i {
+  font-size: 60px;
+  margin-bottom: 5px;
+  -webkit-text-stroke: 3px var(--dblue);
+  color: transparent;
+}
+main .whyCard h6 {
+  font-style: 18px;
+  font-weight: 800;
+  color: var(--acnt);
+}
+main #repair {
+  background-color: #DDE7F1;
+}
+main #repair form .mb-3 > label {
+  font-weight: 700;
+  color: var(--dblue);
+}
+main #reachus {
+  background-color: var(--acnt);
+}
+main #testimonial {
+  background-color: #F8FBFE;
+}
+main #testimonial .testimonialCard {
+  padding: 50px 50px 15px 50px;
+  background-color: #fff;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.06);
+  border-radius: 20px;
+  position: relative;
+}
+main #testimonial .testimonialCard::before {
+  content: "\f10d";
+  font-size: 65px;
+  color: var(--acnt);
+  top: 0;
+  right: 0;
+  position: absolute;
+  transform: translate(50%, -50%);
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: var(--fa-display, inline-block);
+  font-style: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-rendering: auto;
+}
+main #testimonial .testimonialCard q {
+  margin-bottom: 25px;
+  display: block;
+}
+main #testimonial .testimonialCard .userDetails h5 {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--dblue);
+  position: relative;
+  margin-bottom: 0;
+}
+main #testimonial .testimonialCard .userDetails h5::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  background-color: var(--acnt);
+  top: -2px;
+  left: 0;
+}
+main #testimonial .testimonialCard .userDetails p {
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--acnt);
+}
+main #testimonial .carousel-indicators {
+  justify-content: flex-end;
+  margin-left: 0;
+  margin-right: 3rem;
+}
+main #testimonial .carousel-indicators [data-bs-target] {
+  background-color: #fff;
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border-radius: 50px;
+  border: 5px solid var(--acnt);
+  background-clip: unset;
+}
+main #testimonial .carousel-indicators [data-bs-target].active {
+  background-color: var(--acnt);
+}
+main #testimonial .sliderNav {
+  left: 3rem;
+  position: absolute;
+  bottom: 0;
+}
+main #testimonial .sliderNav button {
+  padding: 0 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: var(--acnt);
+  margin-right: 15px;
+  text-transform: uppercase;
+}
+main #testimonial .sliderNav button:hover {
+  color: var(--dblue);
+}
+
+footer .topSection {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+footer .topSection .logo {
+  margin-bottom: 15px;
+}
+footer .topSection .pt-footer {
+  padding-top: 26px;
+}
+footer .topSection h4 {
+  font-weight: 700;
+  color: var(--dblue);
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+footer .topSection .linkList {
+  padding-left: 3px;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+footer .topSection .linkList li:not(:last-child) {
+  margin-bottom: 15px;
+}
+footer .topSection .linkList a {
+  text-decoration: none;
+  color: var(--tcolor);
+}
+footer .topSection .linkList a:hover {
+  text-decoration: none;
+  color: var(--acnt);
+}
+footer .topSection .linkList.social a {
+  font-weight: 700;
+}
+footer .topSection .linkList.social a:hover {
+  color: var(--dblue);
+}
+footer .bottomSection {
+  background-color: #F9F9F9;
+}
+
+@media (max-width: 991px) {
+  main .heroSection .heroText h1 {
+    font-size: 36px;
+  }
+  main .whyCard {
+    margin-bottom: 20px;
+  }
+  main #why .col-lg-3 {
+    padding-bottom: 10px;
+  }
+}
+@media (max-width: 768px) {
+  main .heroSection .row {
+    flex-direction: column-reverse;
+  }
+  main .mainTitle {
+    font-size: 36px;
+  }
+  main .mainTitle::after {
+    height: 30px;
+  }
+  main #repair .row {
+    flex-direction: column-reverse;
+  }
+  main #how .howCard {
+    padding-top: 30px;
+  }
+  main #how .howCard img {
+    max-width: 100px;
+  }
+  main #how .howCard .num {
+    font-size: 70px;
+  }
+  #why .position-relative {
+    order: 3;
+    padding-top: 100%;
+  }
+  header .navbar-expand-lg {
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  }
+}
+@media (max-width: 576px) {
+  header .navbar-brand img {
+    max-width: 70%;
+  }
+  main #testimonial #testimonialSlider {
+    display: grid;
+  }
+  main #testimonial #testimonialSlider .p-5 {
+    padding: 0 !important;
+  }
+  main #testimonial #testimonialSlider .p-5 .testimonialCard {
+    padding: 15px;
+    border-radius: 10px;
+    padding-top: 65px;
+  }
+  main #testimonial #testimonialSlider .p-5 .testimonialCard::before {
+    transform: none;
+  }
+  main #testimonial .carousel-indicators {
+    transform: translateY(100%);
+    margin-right: 0;
+    padding-top: 0px;
+    position: unset;
+    margin-bottom: 0;
+    order: 2;
+    justify-content: center;
+  }
+  main #testimonial .sliderNav {
+    position: relative;
+    left: 0;
+    justify-content: center;
+    display: flex;
+  }
+  main #testimonial .sliderNav button {
+    margin-left: 7px;
+    margin-right: 7px;
+  }
+  main .sectionPad {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}/*# sourceMappingURL=main.css.map */

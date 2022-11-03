@@ -1,0 +1,11 @@
+.voyager .side-menu .navbar-header {
+    background: inherit;
+    border-color: inherit;
+}
+.logo-icon-container {
+    background-color: #fff;
+    border-radius: 50%;
+}
+.app-container .content-container .side-menu .navbar-header .navbar-brand .title {
+    left: 15px;
+}
